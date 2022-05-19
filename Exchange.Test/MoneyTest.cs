@@ -25,6 +25,7 @@ namespace Exchange.Test
         public void testEquality()
         {
             Assert.Equal(new Dollar(5), new Dollar(5));
+            Assert.NotEqual(new Dollar(5), new Dollar(6));
         }
     }
 }

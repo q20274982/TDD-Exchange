@@ -9,10 +9,10 @@
             this.amount = amount;
         }
 
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
-            return true;
-            //return base.Equals(obj);
+            Dollar dollar = (Dollar)obj;
+            return amount == dollar.amount;
         }
 
         public Dollar times(int multiplier)
