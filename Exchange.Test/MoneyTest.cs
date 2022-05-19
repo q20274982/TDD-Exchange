@@ -23,6 +23,8 @@ namespace Exchange.Test
         {
             Assert.Equal(new Dollar(5), new Dollar(5));
             Assert.NotEqual(new Dollar(5), new Dollar(6));
+            Assert.Equal(new Franc(5), new Franc(5));
+            Assert.NotEqual(new Franc(5), new Franc(6));
         }
 
         [Fact]

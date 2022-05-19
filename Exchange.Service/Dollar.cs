@@ -1,18 +1,10 @@
 ﻿namespace Exchange.Service
 {
-    public class Dollar
+    public class Dollar : Money
     {
-        private int amount;
-
         public Dollar(int amount)
         {
             this.amount = amount;
-        }
-
-        public override bool Equals(object obj)
-        {
-            Dollar dollar = (Dollar)obj;
-            return amount == dollar.amount;
         }
 
         public Dollar times(int multiplier)
