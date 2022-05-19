@@ -24,5 +24,13 @@ namespace Exchange.Test
             Assert.Equal(new Dollar(5), new Dollar(5));
             Assert.NotEqual(new Dollar(5), new Dollar(6));
         }
+
+        [Fact]
+        public void testFrancMultiplication()
+        {
+            Franc five = new Franc(5);
+            Assert.Equal(new Franc(10), five.times(2));
+            Assert.Equal(new Franc(15), five.times(3));
+        }
     }
 }
