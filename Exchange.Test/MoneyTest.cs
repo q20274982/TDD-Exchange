@@ -18,7 +18,13 @@ namespace Exchange.Test
             Assert.Equal(10, product.amount);
 
             product = five.times(3);
-            Assert.Equal(10, product.amount);
+            Assert.Equal(15, product.amount);
+        }
+
+        [Fact]
+        public void testEquality()
+        {
+            Assert.Equal(new Dollar(5), new Dollar(5));
         }
     }
 }
