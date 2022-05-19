@@ -14,9 +14,11 @@ namespace Exchange.Test
         public void testMultiplication()
         {
             Dollar five = new Dollar(5);
-            five.times(2);
+            Dollar product = five.times(2);
+            Assert.Equal(10, product.amount);
 
-            Assert.Equal(10, five.amount);
+            product = five.times(3);
+            Assert.Equal(10, product.amount);
         }
     }
 }
