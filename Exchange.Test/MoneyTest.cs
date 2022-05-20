@@ -13,7 +13,7 @@ namespace Exchange.Test
         [Fact]
         public void testMultiplication()
         {
-            Dollar five = new Dollar(5);
+            Money five = Money.dollar(5);
             Assert.Equal(new Dollar(10), five.times(2));
             Assert.Equal(new Dollar(15), five.times(3));
         }

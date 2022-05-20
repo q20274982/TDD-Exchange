@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exchange.Service
 {
-    public class Money
+    public abstract class Money
     {
         protected int amount;
 
@@ -16,5 +16,12 @@ namespace Exchange.Service
             return amount == money.amount
                 && GetType().Equals(money.GetType());
         }
+
+        public static Dollar dollar(int amount)
+        {
+            return new Dollar(amount);
+        }
+
+        public abstract Money times(int multiplier);
     }
 }
