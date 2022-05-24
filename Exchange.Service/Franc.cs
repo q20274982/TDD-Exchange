@@ -2,14 +2,18 @@
 {
     public class Franc : Money
     {
-        public Franc(int amount)
+        public Franc(int amount, string currency) : base(amount, currency)
         {
-            this.amount = amount;
         }
 
         public override Money times(int multiplier)
         {
-            return new Franc(multiplier * amount);
+            return franc(_amount * multiplier);
+        }
+
+        public override string currency()
+        {
+            return _currency;
         }
     }
 }

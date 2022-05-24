@@ -14,27 +14,35 @@ namespace Exchange.Test
         public void testMultiplication()
         {
             Money five = Money.dollar(5);
-            Assert.Equal(new Dollar(10), five.times(2));
-            Assert.Equal(new Dollar(15), five.times(3));
+            Assert.Equal(Money.dollar(10), five.times(2));
+            Assert.Equal(Money.dollar(15), five.times(3));
         }
 
         [Fact]
         public void testEquality()
         {
-            Assert.Equal(new Dollar(5), new Dollar(5));
-            Assert.NotEqual(new Dollar(5), new Dollar(6));
-            Assert.Equal(new Franc(5), new Franc(5));
-            Assert.NotEqual(new Franc(5), new Franc(6));
+            Assert.Equal(Money.dollar(5), Money.dollar(5));
+            Assert.NotEqual(Money.dollar(5), Money.dollar(6));
+            Assert.Equal(Money.franc(5), Money.franc(5));
+            Assert.NotEqual(Money.franc(5), Money.franc(6));
 
-            Assert.False(new Franc(5).Equals(new Dollar(5)));
+            Assert.False(Money.franc(5).Equals(Money.dollar(5)));
         }
 
         [Fact]
         public void testFrancMultiplication()
         {
-            Franc five = new Franc(5);
-            Assert.Equal(new Franc(10), five.times(2));
-            Assert.Equal(new Franc(15), five.times(3));
+            Franc five = Money.franc(5);
+            Assert.Equal(Money.franc(10), five.times(2));
+            Assert.Equal(Money.franc(15), five.times(3));
+        }
+
+        [Fact]
+        public void testCurrency()
+        {
+            Assert.Equal("USD", Money.dollar(1).currency());
+            Assert.Equal("CHF", Money.franc(1).currency());
+
         }
     }
 }
