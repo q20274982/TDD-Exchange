@@ -10,10 +10,5 @@
         {
             return dollar(_amount * multiplier);
         }
-
-        public override string currency()
-        {
-            return _currency;
-        }
     }
 }

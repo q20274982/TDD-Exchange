@@ -10,10 +10,5 @@
         {
             return franc(_amount * multiplier);
         }
-
-        public override string currency()
-        {
-            return _currency;
-        }
     }
 }

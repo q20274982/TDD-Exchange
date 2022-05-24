@@ -36,6 +36,9 @@ namespace Exchange.Service
 
         public abstract Money times(int multiplier);
 
-        public abstract string currency();
+        public string currency()
+        {
+            return _currency;
+        }
     }
 }
